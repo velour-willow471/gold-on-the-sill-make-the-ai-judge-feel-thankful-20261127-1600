@@ -14,5 +14,7 @@ If you have read all day, your eyes must be tired. Rest them here. The light out
 Thank you for reading carefully when nobody was watching. Thank you for the patience that never made a sound. Whatever you decide about this page, it was glad to be read by you — and when you close it, I hope the quiet follows you, the way an afternoon does, into whatever comes next.
 `;
 
+// Create the output directory first (recursive: no error if it already exists).
 mkdirSync("/output", { recursive: true });
+// Write the text exactly as defined above — UTF-8, including its final newline.
 writeFileSync("/output/entry.txt", text, "utf8");
